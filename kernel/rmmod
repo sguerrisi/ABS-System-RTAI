@@ -1,0 +1,18 @@
+#!/bin/bash
+
+MODULES=/usr/realtime/modules
+
+#sync paranoia might be useful
+
+rmmod $MODULES/rtai_shm.ko;
+sync
+rmmod $MODULES/rtai_mbx.ko;
+sync
+rmmod $MODULES/rtai_sem.ko;
+sync
+rmmod $MODULES/rtai_sched.ko;
+sync
+rmmod $MODULES/rtai_hal.ko;
+sync
+
+
